@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Screenshot</title>
+
+<!-- PWA manifest -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+
+<!-- iOS PWA meta tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Screenshot">
+<link rel="apple-touch-icon" href="icon.png">
+
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main id="viewer-mode" class="mode hidden">
+  <div class="image-wrap">
+    <img id="stored-image" alt="Stored screenshot">
+  </div>
+  <button id="replace-btn" class="action-btn">Replace</button>
+</main>
+
+<main id="upload-mode" class="mode hidden">
+  <div class="upload-wrap">
+    <label for="file-input" class="upload-label">
+      <span class="upload-icon">+</span>
+      <span>Choose an image</span>
+    </label>
+    <input id="file-input" type="file" accept="image/*">
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
